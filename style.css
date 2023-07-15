@@ -1,0 +1,74 @@
+/*===== GOOGLE FONTS - Poppins =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url(./assets/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+.logo {
+    width: 80px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.content p {
+    font-size: 24px;
+}
+.content h1 {
+    font-size: 64px;
+    font-weight: 500;
+}
+.content h1 span {
+    color: #ff3735;
+}
+.launch-time {
+    display: flex;
+}
+.launch-time div {
+    flex-basis: 100px;
+}
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+.rocket {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 3s linear infinite;
+}
+@keyframes rocket {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+/* ===== Responsive Media Queries ===== */
+@media screen and (max-width: 320px) {
+    .content h1 {
+        font-size: 45px;
+    }
+    .launch-time div p {
+        font-size: 50px;
+    }
+}
